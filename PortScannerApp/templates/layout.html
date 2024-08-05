@@ -1,0 +1,23 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Port Scanner</title>
+</head>
+<body>
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+        <div class="buttons">
+            <a href="{% url 'portscanner:manu' %}"><button type="button">M A N U</button></a>
+            <a href="{% url 'portscanner:showport' %}"><button type="button">Show Port</button></a>
+            <a href="{% url 'portscanner:openport' %}"><button type="button">Open Port</button></a>
+            <a href="{% url 'portscanner:closeport' %}"><button type="button">Close Port</button></a>
+        </div>
+    </div>
+</body>
+</html>
