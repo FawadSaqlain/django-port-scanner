@@ -23,12 +23,3 @@ def get_process_info(port):
             return f"Process ID: {conn.pid}, Name: {psutil.Process(conn.pid).name()}"
     return "No process found"
 
-# if __name__ == "__main__":
-    # Get the IP address and port number from the user
-    # while True:
-    #     ip_address = input("Enter the IP address: ")
-    #     port_number = int(input("Enter the port number: "))
-
-        # Scan the specified port
-        # scan_port(ip_address, port_number)
-        # print(get_process_info(port_number))
